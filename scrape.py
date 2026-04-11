@@ -7,7 +7,7 @@ HEAD = {
 }
 
 # Get links from economy archives 
-def eco_headerlinks():
+def get_eco_headerlinks():
     link = "https://english.onlinekhabar.com/category/economy"
     response = requests.get(link,headers=HEAD)
     soup = BeautifulSoup(response.text ,"html.parser" )
@@ -20,8 +20,20 @@ def eco_headerlinks():
             links.append(href)
     #remove duplicate values
     return list(set(links))
-    
+#get headers and body content from the specific article
+def eco(eco_link_list):
+    response = requests.get(eco_link_list,headers=HEAD)
+    soup = BeautifulSoup(response.text, "html.parser")
+    #header
+    div = soup.find('div', class_ ='ok-post-header')
+    header = div.find('h1')
+    print(header.text.strip())
+    #body
+    ...
     
 if __name__ == "__main__":
-    eco_headers = eco_headerlinks()
+    eco_link_list = get_eco_headerlinks()
+    for link in eco_link_list:
+        eco(link)
+        exit()
     
