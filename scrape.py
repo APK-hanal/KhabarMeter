@@ -6,10 +6,9 @@ import json
 HEAD = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
-## Economy section
-# Get links from economy archives 
-def get_eco_headerlinks():
-    link = "https://english.onlinekhabar.com/category/economy"
+
+# Get links from archives 
+def get_headerlinks(link):
     response = requests.get(link,headers=HEAD)
     soup = BeautifulSoup(response.text ,"html.parser" )
     div = soup.find("div", class_= "ok-details-content-left")
@@ -41,24 +40,6 @@ def scrape(link_list):
         "body" : body
     }
 
-
-## Politics
-        
-def get_politics_links():
-    link = "https://english.onlinekhabar.com/category/political"
-    response = requests.get(link , headers= HEAD)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    div = soup.find('div', class_ = "ok-details-content-left")
-    heads = div.find_all('a',href = True)
-    links = []
-    for a_tag in heads:
-        href = a_tag['href']
-        if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
-            links.append(href)
-    #remove duplicated values
-    return list(set(links))
-
-
 # Save to a json file UwU
 def save_article(articles, file):
     with open(file , 'w',encoding = "utf-8") as f:
@@ -66,8 +47,10 @@ def save_article(articles, file):
     
 #Executive Block
 if __name__ == "__main__":
-    politics_links = get_politics_links()
-    eco_link_list = get_eco_headerlinks()
+    eco_link ='https://english.onlinekhabar.com/category/economy'
+    pol_link ='https://english.onlinekhabar.com/category/political'
+    politics_links = get_headerlinks(pol_link)
+    eco_link_list = get_headerlinks(eco_link)
     articles_eco = []
     articles_pol = []
     for link in eco_link_list:
