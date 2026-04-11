@@ -11,16 +11,16 @@ def eco_headerlinks():
     link = "https://english.onlinekhabar.com/category/economy"
     response = requests.get(link,headers=HEAD)
     soup = BeautifulSoup(response.text ,"html.parser" )
-    links = soup.find_all("a",href=True)
-    for a_tag in links:
+    div = soup.find("div", class_= "ok-details-content-left")
+    heads = div.find_all("a",href=True)
+    links = []
+    for a_tag in heads:
         href = a_tag['href']
         if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
             links.append(href)
             print(href)
-        print(href,"..")
-        time.sleep(1)    
-    
-    
+    #remove duplicate values
+    return list(set(links))
     
     
 if __name__ == "__main__":
