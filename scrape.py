@@ -18,10 +18,10 @@ def eco_headerlinks():
         href = a_tag['href']
         if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
             links.append(href)
-            print(href)
     #remove duplicate values
     return list(set(links))
     
     
 if __name__ == "__main__":
-    eco_headerlinks()
+    eco_headers = eco_headerlinks()
+    
