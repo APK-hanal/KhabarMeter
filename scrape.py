@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import json
 HEAD = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
@@ -21,8 +22,9 @@ def get_eco_headerlinks():
     #remove duplicate values
     return list(set(links))
 #get headers and body content from the specific article
-def eco(eco_link_list):
+def eco_scrape(eco_link_list):
     response = requests.get(eco_link_list,headers=HEAD)
+    response.encoding = "utf-8"
     soup = BeautifulSoup(response.text, "html.parser")
     #header
     head_div = soup.find('div', class_ ='ok-post-header')
@@ -37,14 +39,23 @@ def eco(eco_link_list):
         "header" : header,
         "body" : body
     }
+
+# Save to a json file UwU
+def save_article(articles, file):
+    with open(file , 'w',encoding = "utf-8") as f:
+        json.dump(articles, f , ensure_ascii= False, indent = 2)
+    
+        
         
 
     
 if __name__ == "__main__":
     eco_link_list = get_eco_headerlinks()
+    articles = []
     for link in eco_link_list:
-        article = eco(link)
-        
-    print(article["header"])
-        
+        article = eco_scrape(link)
+        articles.append(article)
+        time.sleep(1)
+    save_article(articles,'data/economy.json')
+    print("Yessirski data saved!!")        
     
