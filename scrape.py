@@ -90,7 +90,7 @@ def save_article(articles, file):
     with open(file , 'w',encoding = "utf-8") as f:
         json.dump(articles, f , ensure_ascii= False, indent = 2)
     
-    
+#Executive Block
 if __name__ == "__main__":
     politics_links = get_politics_links()
     eco_link_list = get_eco_headerlinks()
