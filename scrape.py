@@ -25,22 +25,26 @@ def get_headerlinks(link):
 
 #get headers and body content from the specific article
 def scrape(link):
-    response = requests.get(link,headers=HEAD)
-    response.encoding = "utf-8"
-    soup = BeautifulSoup(response.text, "html.parser")
-    #header
-    head_div = soup.find('div', class_ ='ok-post-header')
-    header = unescape(head_div.find('h1').text.strip())
-    #body
-    body = ""
-    body_div = soup.find('div', class_= "post-content-wrap")
-    for bodies in body_div.find_all('p'):
-        body += unescape(bodies.text.strip())
-    return {
-        "link" :link,
-        "header" : header,
-        "body" : body
-    }
+    try:
+        response = requests.get(link,headers=HEAD,timeout= 10)
+        response.encoding = "utf-8"
+        soup = BeautifulSoup(response.text, "html.parser")
+        #header
+        head_div = soup.find('div', class_ ='ok-post-header')
+        header = unescape(head_div.find('h1').text.strip())
+        #body
+        body = ""
+        body_div = soup.find('div', class_= "post-content-wrap")
+        for bodies in body_div.find_all('p'):
+            body += unescape(bodies.text.strip())
+        return {
+            "link" :link,
+            "header" : header,
+            "body" : body
+        }
+    except Exception as e:
+        print(f"Failed to scrape {link} due to : {e}")
+        return None
 
 # Save to a json file UwU
 def save_article(articles, file):
@@ -57,11 +61,13 @@ if __name__ == "__main__":
     articles_pol = []
     for link in eco_link_list:
         article = scrape(link)
-        articles_eco.append(article)
+        if article:
+            articles_eco.append(article)
         time.sleep(1)
     for link in politics_links:
         article = scrape(link)
-        articles_pol.append(article)
+        if article:
+            articles_pol.append(article)
         time.sleep(1)
     save_article(articles_eco,'data/economy.json')
     save_article(articles_pol,'data/politics.json')
