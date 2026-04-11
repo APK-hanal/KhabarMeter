@@ -25,15 +25,26 @@ def eco(eco_link_list):
     response = requests.get(eco_link_list,headers=HEAD)
     soup = BeautifulSoup(response.text, "html.parser")
     #header
-    div = soup.find('div', class_ ='ok-post-header')
-    header = div.find('h1')
-    print(header.text.strip())
+    head_div = soup.find('div', class_ ='ok-post-header')
+    header = head_div.find('h1').text.strip()
     #body
-    ...
+    body = ""
+    body_div = soup.find('div', class_= "post-content-wrap")
+    for bodies in body_div.find_all('p'):
+        body += bodies.text.strip()
+    return {
+        "link" :eco_link_list,
+        "header" : header,
+        "body" : body
+    }
+        
+
     
 if __name__ == "__main__":
     eco_link_list = get_eco_headerlinks()
     for link in eco_link_list:
-        eco(link)
-        exit()
+        article = eco(link)
+        
+    print(article["header"])
+        
     
