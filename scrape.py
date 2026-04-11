@@ -13,7 +13,11 @@ def eco_headerlinks():
     soup = BeautifulSoup(response.text ,"html.parser" )
     links = soup.find_all("a",href=True)
     for a_tag in links:
-        print(a_tag.text)
+        href = a_tag['href']
+        if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
+            links.append(href)
+            print(href)
+        print(href,"..")
         time.sleep(1)    
     
     
