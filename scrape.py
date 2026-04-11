@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import json
+from html import unescape
+
 HEAD = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
@@ -22,20 +24,20 @@ def get_headerlinks(link):
     return list(set(links))
 
 #get headers and body content from the specific article
-def scrape(link_list):
-    response = requests.get(link_list,headers=HEAD)
+def scrape(link):
+    response = requests.get(link,headers=HEAD)
     response.encoding = "utf-8"
     soup = BeautifulSoup(response.text, "html.parser")
     #header
     head_div = soup.find('div', class_ ='ok-post-header')
-    header = head_div.find('h1').text.strip()
+    header = unescape(head_div.find('h1').text.strip())
     #body
     body = ""
     body_div = soup.find('div', class_= "post-content-wrap")
     for bodies in body_div.find_all('p'):
-        body += bodies.text.strip()
+        body += unescape(bodies.text.strip())
     return {
-        "link" :link_list,
+        "link" :link,
         "header" : header,
         "body" : body
     }
