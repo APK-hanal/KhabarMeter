@@ -46,24 +46,40 @@ def eco_scrape(eco_link_list):
 def get_politics_links():
     link = "https://english.onlinekhabar.com/category/political"
     response = requests.get(link , headers= HEAD)
-    soup = BeautifulSoup(response, 'html.parser')
-    div = soup.find('div', "ok-details-content-left")
+    soup = BeautifulSoup(response.text, 'html.parser')
+    div = soup.find('div', class_ = "ok-details-content-left")
     heads = div.find_all('a',href = True)
     links = []
     for a_tag in heads:
         href = a_tag['href']
         if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
             links.append(href)
-    #remove duplicate values
+    #remove duplicated values
     return list(set(links))
 
 def politics_scrape(link):
     response = requests.get(link , headers= HEAD)
     response.encoding= 'utf-8'
-    soup = BeautifulSoup(response , 'html.parser')
+    soup = BeautifulSoup(response.text , 'html.parser')
+    # headers 
+    header_div = soup.find('div' , class_ = 'ok-post-header')
+    header = header_div.find('h1').text.strip()
+    #body 
+    body = ''
+    body_div = soup.find('div',class_ = 'post-content-wrap')
+    body_paragraphs = body_div.find_all('p')
+    for bod in body_paragraphs:
+        body += bod.text.strip()
+        
+    return {
+        "link":link,
+        'header': header,
+        'body': body
+    }
     
     
-
+    
+    
     
     
 
@@ -76,12 +92,19 @@ def save_article(articles, file):
     
     
 if __name__ == "__main__":
+    politics_links = get_politics_links()
     eco_link_list = get_eco_headerlinks()
-    articles = []
+    articles_eco = []
+    articles_pol = []
     for link in eco_link_list:
         article = eco_scrape(link)
-        articles.append(article)
+        articles_eco.append(article)
         time.sleep(1)
-    save_article(articles,'data/economy.json')
+    for link in politics_links:
+        article = politics_scrape(link)
+        articles_pol.append(article)
+        time.sleep(1)
+    save_article(articles_eco,'data/economy.json')
+    save_article(articles_pol,'data/politics.json')
     print("Yessirski data saved!!")        
     
