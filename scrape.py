@@ -6,7 +6,7 @@ import json
 HEAD = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
-
+## Economy section
 # Get links from economy archives 
 def get_eco_headerlinks():
     link = "https://english.onlinekhabar.com/category/economy"
@@ -40,14 +40,40 @@ def eco_scrape(eco_link_list):
         "body" : body
     }
 
+
+## Politics
+        
+def get_politics_links():
+    link = "https://english.onlinekhabar.com/category/political"
+    response = requests.get(link , headers= HEAD)
+    soup = BeautifulSoup(response, 'html.parser')
+    div = soup.find('div', "ok-details-content-left")
+    heads = div.find_all('a',href = True)
+    links = []
+    for a_tag in heads:
+        href = a_tag['href']
+        if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
+            links.append(href)
+    #remove duplicate values
+    return list(set(links))
+
+def politics_scrape(link):
+    response = requests.get(link , headers= HEAD)
+    response.encoding= 'utf-8'
+    soup = BeautifulSoup(response , 'html.parser')
+    
+    
+
+    
+    
+
+
+
 # Save to a json file UwU
 def save_article(articles, file):
     with open(file , 'w',encoding = "utf-8") as f:
         json.dump(articles, f , ensure_ascii= False, indent = 2)
     
-        
-        
-
     
 if __name__ == "__main__":
     eco_link_list = get_eco_headerlinks()
