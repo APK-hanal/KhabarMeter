@@ -19,14 +19,25 @@ def analysis(articles):
         results.append({"link":article["link"],
                         'header':article['header'],
                         "sentiment": sentiment[0]["label"],
-                        'score':round(sentiment[0]['score'],4)})
+                        'score':round(sentiment[0]['score']*100,2)})
     return results
 
-
+# save
+def save_results(results,file):
+    with open(file, 'w', encoding='utf-8') as f:
+        for result in results:
+            json.dump(result,f, ensure_ascii= False, indent = 2)
+            
 #Executive Block
 if __name__ == "__main__":
-    articles = load_article('data/economy.json')
-    result = analysis(articles)
-    print(result[1]['header'])
-    print(result[1]['score'])
-    print(result[1]['sentiment'])
+    # For economy
+    eco_filename = 'data/eco_results.json'
+    eco_articles = load_article(eco_filename)
+    eco_results = analysis(eco_articles)
+    save_results(eco_results , eco_filename)
+    # For Politics
+    pol_filename = 'data/pol_result.json'
+    pol_articles = load_article(pol_filename)
+    pol_results = analysis(pol_articles)
+    save_results(pol_results,pol_filename)
+    
