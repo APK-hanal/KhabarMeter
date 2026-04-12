@@ -5,12 +5,13 @@
     <title>KhabarMeter</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
 </head>
 <body>
 <div class="wrapper">
 
     <header>
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="KhabarMeter logo">
+        <img src="{{ url_for('static', filename='favicon.png') }}" alt="KhabarMeter logo">
         <h1>Khabar<span>Meter</span></h1>
         <p>Sentiment analysis of Nepali news — Onlinekhabar English</p>
         <p class="disclaimer">
