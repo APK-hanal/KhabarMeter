@@ -22,4 +22,6 @@ def pol_results(file):
     return jsonify(data)
 
 if __name__ == "__main__":
+    eco_results('data/eco_results.json')
+    pol_results('data/pol_result.json')
     app.run(debug=True)
