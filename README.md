@@ -1,14 +1,28 @@
-Khabar(news)
-Meter(meter)
-KhabarMeter
-This is a small project that I built to have a NLP for nepali news articles. This acts as a measurement to economic activities and political changes. Although this is based purely on a ML model and might "hallucinate" it also displays its confidence in percentage so you can roughly get an idea of how good the take is. For example, it might flag "Gold drops in value by 30%" as a neutral article with 60% accuracy. 
+Khabarmeter
 
-scrape.py scrapes data from the english.Onlinekhabar.com site for political and economic articles and stores them in their respective json files.Then, model.py uses NLP and a sentiment analysis model called "cardiffnlp/twitter-roberta-base-sentiment-latest" which was trained on Tweets hence it may be inaccurate on some articles. 
-then we have a flask connected HTML/CSS/JS site at index.html in app.py which is the main dashboard you see in the website. all in all, this was a project using mainly requests, BeautifulSoup4 and NLP.
+Sentiment analysis of Nepali political and economic news, sourced from [Onlinekhabar English](https://english.onlinekhabar.com).
 
-It is available at render.com/KhabarMeter(hopefully) but it does take a minute to load.
+What it does...
+Scrapes articles from Onlinekhabar's politics and economy sections, runs them through a sentiment analysis model, and displays the results on a dashboard showing positive, negative, and neutral coverage.
 
+Working Principle
+scrape.py — collects article headlines and body text using Requests and BeautifulSoup4
+model.py — runs sentiment analysis using "cardiffnlp/twitter-roberta-base-sentiment-latest"
+app.py — serves the dashboard via Flask
 
+Limitations
+The model was trained on tweets, not news articles, so results on financial and political reporting may be inaccurate. Each result includes a confidence score — treat low confidence scores with skepticism.
 
-                                                                                        -Creator 
-                                                                                        Apil.
+Run locally
+```bash
+git clone https://github.com/APK-hanal/khabarmeter
+cd khabarmeter
+pip install -r requirements.txt
+python scrape.py
+python model.py
+python app.py
+```
+Built with
+Python, BeautifulSoup4, HuggingFace Transformers, Flask
+
+Built by [Apil](https://github.com/APK-hanal)
