@@ -13,6 +13,11 @@
     --negative: #b85450;
     --neutral: #5a6e8a;
 }
+header img {
+    height: 40px;
+    margin-bottom: 12px;
+}
+
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
