@@ -1,3 +1,4 @@
-data/
+data/economy.json
+data/politics.json
 .venv/
 __pycache__/
