@@ -32,7 +32,7 @@ def get_headerlinks_kp(link):
     for a_tag in heads:
         href = a_tag['href']
         if href.startswith("/") and not href.startswith('/author/'):
-            links.append(href)
+            links.append(f"https://kathmandupost.com{href}")
     #Duplicates arise as the link is also present in the images of the article :>
     return list(set(links))
             
@@ -88,27 +88,43 @@ def save_article(articles, file):
     
 #Executive Block
 if __name__ == "__main__":
-    link = 'https://kathmandupost.com/money'
-    f = get_headerlinks_kp(link)
-    print(f[:2])
-    sys.exit()
-    eco_link ='https://english.onlinekhabar.com/category/economy'
-    pol_link ='https://english.onlinekhabar.com/category/political'
-    politics_links = get_headerlinks_ok(pol_link)
-    eco_link_list = get_headerlinks_ok(eco_link)
-    articles_eco = []
-    articles_pol = []
-    for link in eco_link_list:
-        article = scrape_ok(link)
-        if article:
-            articles_eco.append(article)
+    #The Kathmandu Post
+    kp_eco_link = 'https://kathmandupost.com/money'
+    kp_eco_link_list = get_headerlinks_kp(kp_eco_link)
+    kp_pol_link = 'https://kathmandupost.com/politics'
+    kp_pol_link_list = get_headerlinks_kp(kp_pol_link)
+    kp_articles_pol= []
+    kp_articles_eco= []
+    for kp_link_eco in kp_eco_link_list:
+        kp_article_eco = scrape_kp(kp_link_eco)
+        if kp_article_eco:
+            kp_articles_eco.append(kp_article_eco)
         time.sleep(1)
-    for link in politics_links:
-        article = scrape_ok(link)
-        if article:
-            articles_pol.append(article)
+    for kp_link_pol in kp_pol_link_list:
+        kp_article_pol = scrape_kp(kp_link_pol)
+        if kp_article_pol:
+            kp_articles_pol.append(kp_article_pol)
         time.sleep(1)
-    save_article(articles_eco,'data/economy.json')
-    save_article(articles_pol,'data/politics.json')
+    save_article(kp_articles_eco,'data/economy.json')
+    save_article(kp_articles_pol,'data/politics.json')
+    # OnlineKhabar as ok
+    ok_eco_link ='https://english.onlinekhabar.com/category/economy'
+    ok_pol_link ='https://english.onlinekhabar.com/category/political'
+    ok_politics_links = get_headerlinks_ok(ok_pol_link)
+    ok_eco_link_list = get_headerlinks_ok(ok_eco_link)
+    ok_articles_eco = []
+    ok_articles_pol = []
+    for ok_link in ok_eco_link_list:
+        ok_article_eco = scrape_ok(ok_link)
+        if ok_article_eco:
+            ok_articles_eco.append(ok_article_eco)
+        time.sleep(1)
+    for ok_link in ok_politics_links:
+        ok_article_pol = scrape_ok(ok_link)
+        if ok_article_pol:
+            ok_articles_pol.append(ok_article_pol)
+        time.sleep(1)
+    save_article(ok_articles_eco,'data/economy.json')
+    save_article(ok_articles_pol,'data/politics.json')
     print("Yessirski data saved!!")        
     
