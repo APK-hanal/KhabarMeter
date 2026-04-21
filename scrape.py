@@ -1,4 +1,3 @@
-#im using Onlinekhabar's english version as the source of my news
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -10,7 +9,7 @@ HEAD = {
 }
 
 # Get links from archives 
-def get_headerlinks(link):
+def get_headerlinks_ok(link):
     response = requests.get(link,headers=HEAD)
     soup = BeautifulSoup(response.text ,"html.parser" )
     div = soup.find("div", class_= "ok-details-content-left")
@@ -23,8 +22,22 @@ def get_headerlinks(link):
     #remove duplicate values
     return list(set(links))
 
+def get_headerlinks_kp(link):
+    response = requests.get(link, headers= HEAD)
+    soup = BeautifulSoup(response.text,'html.parser')
+    div = soup.find('div', class_ ='block--morenews' )
+    heads = div.find_all('a', href = True)
+    links = []
+    for a_tag in heads:
+        href = a_tag['href']
+        if href.startswith("https://kathmandupost.com"):
+            links.append(href)
+    #Duplicates arise as the link is also present in the images of the article :>
+    return set(links())
+            
+    
 #get headers and body content from the specific article
-def scrape(link):
+def scrape_ok(link):
     try:
         response = requests.get(link,headers=HEAD,timeout= 10)
         response.encoding = "utf-8"
@@ -55,17 +68,17 @@ def save_article(articles, file):
 if __name__ == "__main__":
     eco_link ='https://english.onlinekhabar.com/category/economy'
     pol_link ='https://english.onlinekhabar.com/category/political'
-    politics_links = get_headerlinks(pol_link)
-    eco_link_list = get_headerlinks(eco_link)
+    politics_links = get_headerlinks_ok(pol_link)
+    eco_link_list = get_headerlinks_ok(eco_link)
     articles_eco = []
     articles_pol = []
     for link in eco_link_list:
-        article = scrape(link)
+        article = scrape_ok(link)
         if article:
             articles_eco.append(article)
         time.sleep(1)
     for link in politics_links:
-        article = scrape(link)
+        article = scrape_ok(link)
         if article:
             articles_pol.append(article)
         time.sleep(1)
