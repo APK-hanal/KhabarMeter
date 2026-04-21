@@ -52,6 +52,7 @@ def scrape_ok(link):
         for bodies in body_div.find_all('p'):
             body += unescape(bodies.text.strip())
         return {
+            "source":"Onlinekhabar",
             "link" :link,
             "header" : header,
             "body" : body
@@ -59,7 +60,26 @@ def scrape_ok(link):
     except Exception as e:
         print(f"Failed to scrape {link} due to : {e}")
         return None
-    
+
+def scrape_kp(link):
+    try:
+        response = requests.get(link,headers= HEAD)
+        response.encoding = "utf-8"
+        soup = BeautifulSoup(response.text,'html.parser')
+        head_div = soup.find('div', class_="col-sm-8")
+        header = unescape(head_div.find('h1').text.strip())
+        body = ''
+        body_section = soup.find('section' ,class_="story-section")
+        for bodies in body_section.find_all('p'):
+            body += unescape(bodies.text.strip())
+        return {
+            "source":"The Kathmandu Post",
+            "link":link,
+            "header":header,
+            "body":body
+        }        
+    except Exception as e:
+        print("Error in scraping", e)
 
 # Save to a json file UwU
 def save_article(articles, file):
