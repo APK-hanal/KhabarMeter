@@ -25,6 +25,7 @@ python app.py
 # Temporarily Deployed 
 https://khabarmeter.onrender.com/
 <img width="1316" height="884" alt="image" src="https://github.com/user-attachments/assets/d062eccb-5975-4f6e-8b9e-c1c623e16f58" />
+
 <img width="1418" height="870" alt="image" src="https://github.com/user-attachments/assets/fabb6b25-d016-4e6e-a917-1c69154cf67d" />
 
 
