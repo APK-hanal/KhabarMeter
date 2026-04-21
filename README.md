@@ -1,9 +1,9 @@
 Khabarmeter
 
-Sentiment analysis of Nepali political and economic news, sourced from [Onlinekhabar English](https://english.onlinekhabar.com).
+Sentiment analysis of Nepali political and economic news, sourced from Onlinekhabar English (https://english.onlinekhabar.com) and The Kathmandu Post (https://kathmandupost.com/)
 
 What it does...
-Scrapes articles from Onlinekhabar's politics and economy sections, runs them through a sentiment analysis model, and displays the results on a dashboard showing positive, negative, and neutral coverage.
+Scrapes articles from Onlinekhabar and The Kathmandu Post politics and economy sections, runs them through a sentiment analysis model, and displays the results on a dashboard showing positive, negative, and neutral coverage.
 
 Working Principle
 scrape.py — collects article headlines and body text using Requests and BeautifulSoup4
