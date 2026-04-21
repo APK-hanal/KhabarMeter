@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import json
 from html import unescape
+import sys
 
 HEAD = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
@@ -30,10 +31,10 @@ def get_headerlinks_kp(link):
     links = []
     for a_tag in heads:
         href = a_tag['href']
-        if href.startswith("https://kathmandupost.com"):
+        if href.startswith("/") and not href.startswith('/author/'):
             links.append(href)
     #Duplicates arise as the link is also present in the images of the article :>
-    return set(links())
+    return list(set(links))
             
     
 #get headers and body content from the specific article
@@ -58,6 +59,7 @@ def scrape_ok(link):
     except Exception as e:
         print(f"Failed to scrape {link} due to : {e}")
         return None
+    
 
 # Save to a json file UwU
 def save_article(articles, file):
@@ -66,6 +68,10 @@ def save_article(articles, file):
     
 #Executive Block
 if __name__ == "__main__":
+    link = 'https://kathmandupost.com/money'
+    f = get_headerlinks_kp(link)
+    print(f[:2])
+    sys.exit()
     eco_link ='https://english.onlinekhabar.com/category/economy'
     pol_link ='https://english.onlinekhabar.com/category/political'
     politics_links = get_headerlinks_ok(pol_link)
