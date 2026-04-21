@@ -88,6 +88,8 @@ def save_article(articles, file):
     
 #Executive Block
 if __name__ == "__main__":
+    eco_articles = []
+    pol_articles = []
     #The Kathmandu Post
     kp_eco_link = 'https://kathmandupost.com/money'
     kp_eco_link_list = get_headerlinks_kp(kp_eco_link)
@@ -105,8 +107,8 @@ if __name__ == "__main__":
         if kp_article_pol:
             kp_articles_pol.append(kp_article_pol)
         time.sleep(1)
-    save_article(kp_articles_eco,'data/economy.json')
-    save_article(kp_articles_pol,'data/politics.json')
+    eco_articles.append(kp_articles_eco)
+    pol_articles.append(kp_articles_pol)
     # OnlineKhabar as ok
     ok_eco_link ='https://english.onlinekhabar.com/category/economy'
     ok_pol_link ='https://english.onlinekhabar.com/category/political'
@@ -124,7 +126,9 @@ if __name__ == "__main__":
         if ok_article_pol:
             ok_articles_pol.append(ok_article_pol)
         time.sleep(1)
-    save_article(ok_articles_eco,'data/economy.json')
-    save_article(ok_articles_pol,'data/politics.json')
+    eco_articles.append(ok_articles_eco)
+    pol_articles.append(ok_articles_pol)
+    save_article(eco_articles,'data/economy.json')
+    save_article(pol_articles,'data/politics.json')
     print("Yessirski data saved!!")        
     
