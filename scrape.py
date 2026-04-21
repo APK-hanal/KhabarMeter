@@ -95,39 +95,31 @@ if __name__ == "__main__":
     kp_eco_link_list = get_headerlinks_kp(kp_eco_link)
     kp_pol_link = 'https://kathmandupost.com/politics'
     kp_pol_link_list = get_headerlinks_kp(kp_pol_link)
-    kp_articles_pol= []
-    kp_articles_eco= []
     for kp_link_eco in kp_eco_link_list:
         kp_article_eco = scrape_kp(kp_link_eco)
         if kp_article_eco:
-            kp_articles_eco.append(kp_article_eco)
+            eco_articles.append(kp_article_eco)
         time.sleep(1)
     for kp_link_pol in kp_pol_link_list:
         kp_article_pol = scrape_kp(kp_link_pol)
         if kp_article_pol:
-            kp_articles_pol.append(kp_article_pol)
+            pol_articles.append(kp_article_pol)
         time.sleep(1)
-    eco_articles.append(kp_articles_eco)
-    pol_articles.append(kp_articles_pol)
     # OnlineKhabar as ok
     ok_eco_link ='https://english.onlinekhabar.com/category/economy'
     ok_pol_link ='https://english.onlinekhabar.com/category/political'
     ok_politics_links = get_headerlinks_ok(ok_pol_link)
     ok_eco_link_list = get_headerlinks_ok(ok_eco_link)
-    ok_articles_eco = []
-    ok_articles_pol = []
     for ok_link in ok_eco_link_list:
         ok_article_eco = scrape_ok(ok_link)
         if ok_article_eco:
-            ok_articles_eco.append(ok_article_eco)
+            eco_articles.append(ok_article_eco)
         time.sleep(1)
     for ok_link in ok_politics_links:
         ok_article_pol = scrape_ok(ok_link)
         if ok_article_pol:
-            ok_articles_pol.append(ok_article_pol)
+            pol_articles.append(ok_article_pol)
         time.sleep(1)
-    eco_articles.append(ok_articles_eco)
-    pol_articles.append(ok_articles_pol)
     save_article(eco_articles,'data/economy.json')
     save_article(pol_articles,'data/politics.json')
     print("Yessirski data saved!!")        

@@ -1,122 +1,242 @@
 [
   {
-    "link": "https://english.onlinekhabar.com/mofa-briefs-ministers-on-foreign-affairs-and-diplomatic-code-of-conduct.html",
-    "header": "MoFA briefs Ministers on ‘Foreign Affairs and Diplomatic Code of Conduct’",
+    "link": "https://kathmandupost.com/politics/2026/04/01/old-guard-repeats-old-mistakes-even-after-new-political-party-runs-over-them",
+    "header": "Old guard repeats old mistakes even after new political party runs over them",
     "sentiment": "neutral",
-    "score": 93.32
+    "score": 56.62
   },
   {
-    "link": "https://english.onlinekhabar.com/speaker-dp-aryal-assumes-office.html",
-    "header": "Speaker DP Aryal assumes office",
+    "link": "https://kathmandupost.com/politics/2026/03/31/planned-ban-on-student-unions-sparks-debate-on-fundamental-right",
+    "header": "Planned ban on student unions sparks debate on fundamental right",
     "sentiment": "neutral",
-    "score": 82.8
+    "score": 62.95
   },
   {
-    "link": "https://english.onlinekhabar.com/rsp-fails-deliver-on-asset-disclosure.html",
-    "header": "RSP fails to deliver on asset disclosure pledge as ministers withhold details",
+    "link": "https://kathmandupost.com/politics/2026/04/16/in-candid-discussion-chief-ministers-urge-pm-to-empower-provinces",
+    "header": "In candid discussion, chief ministers urge PM to empower provinces",
     "sentiment": "neutral",
-    "score": 90.63
+    "score": 85.74
   },
   {
-    "link": "https://english.onlinekhabar.com/saturday-sunday-holiday-introduced-for-government-offices-and-educational-institutions.html",
-    "header": "Saturday–Sunday holiday introduced for government offices and educational institutions",
+    "link": "https://kathmandupost.com/politics/2026/04/05/ruling-rsp-is-weighing-which-party-will-get-its-woman-parliamentarian-elected-deputy-speaker",
+    "header": "Ruling RSP is weighing which party will get its woman parliamentarian elected deputy Speaker",
     "sentiment": "neutral",
-    "score": 88.3
+    "score": 79.86
   },
   {
-    "link": "https://english.onlinekhabar.com/new-ministers-to-be-sworn-in-today.html",
-    "header": "New Ministers to be sworn in today",
+    "link": "https://kathmandupost.com/politics/2026/04/13/congress-uml-must-reform-provincial-governance-for-their-own-good-expert-says",
+    "header": "Congress, UML must reform provincial governance for their own good, expert says",
     "sentiment": "neutral",
-    "score": 89.22
+    "score": 85.01
   },
   {
-    "link": "https://english.onlinekhabar.com/jhakku-subedi-appointed-parliamentary-party-leader-of-ncp-in-national-assembly.html",
-    "header": "Jhakku Subedi appointed parliamentary party leader of NCP in National Assembly",
+    "link": "https://kathmandupost.com/politics/2026/04/02/new-house-session-begins",
+    "header": "New House session begins amid blame game",
     "sentiment": "neutral",
-    "score": 82.2
+    "score": 91.5
   },
   {
-    "link": "https://english.onlinekhabar.com/rsp-backs-shram-sanskriti-party-candidate-for-deputy-speaker-securing-two-thirds-majority.html",
-    "header": "RSP backs Shram Sanskriti Party candidate for Deputy Speaker, securing two thirds majority",
-    "sentiment": "positive",
-    "score": 60.96
+    "link": "https://kathmandupost.com/politics/2026/04/01/shah-consults-lawmakers-on-governance-and-budget-priorities",
+    "header": "Shah consults lawmakers on governance and budget priorities",
+    "sentiment": "neutral",
+    "score": 89.39
   },
   {
-    "link": "https://english.onlinekhabar.com/dr-narayan-kandel-appointed-as-attorney-general.html",
-    "header": "Dr Narayan Kandel appointed as Attorney General",
+    "link": "https://kathmandupost.com/politics/2026/04/12/former-president-bhandari-eyes-active-political-role-as-dissidents-seek-to-reorganise-uml",
+    "header": "Former President Bhandari eyes active political role as dissidents seek to reorganise UML",
     "sentiment": "neutral",
-    "score": 85.2
+    "score": 60.7
   },
   {
-    "link": "https://english.onlinekhabar.com/rsp-registers-dp-aryals-candidacy-for-speaker.html",
-    "header": "RSP registers DP Aryal’s candidacy for Speaker",
+    "link": "https://kathmandupost.com/politics/2026/04/01/ruling-rastriya-swatantra-party-to-deploy-lawmakers-alongside-ministers-to-address-people-s-concerns",
+    "header": "Ruling Rastriya Swatantra Party to deploy lawmakers, alongside ministers, to address people’s concerns",
     "sentiment": "neutral",
-    "score": 85.1
+    "score": 89.1
   },
   {
-    "link": "https://english.onlinekhabar.com/former-pm-kp-sharma-oli-released.html",
-    "header": "Former PM KP Sharma Oli released from police custody",
+    "link": "https://kathmandupost.com/politics/2026/03/29/ncp-picks-coordinator-dahal-as-parliamentary-party-leader",
+    "header": "NCP picks coordinator Dahal as parliamentary party leader",
     "sentiment": "neutral",
-    "score": 92.82
+    "score": 87.28
   },
   {
-    "link": "https://english.onlinekhabar.com/federal-cabinet-order-reshuffled.html",
-    "header": "Federal Cabinet order of precedence reshuffled",
+    "link": "https://kathmandupost.com/politics/2026/03/29/court-remands-oli-lekhak-to-five-days-in-custody",
+    "header": "Court remands Oli, Lekhak to five days in custody",
     "sentiment": "neutral",
-    "score": 93.42
+    "score": 66.16
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/04/10/prime-minister-shah-recommends-ramjee-yadav-and-gauri-kumari-yadav-as-ministers",
+    "header": "Prime Minister Shah recommends Ramjee Yadav and Gauri Kumari Yadav as ministers",
+    "sentiment": "neutral",
+    "score": 89.79
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/03/30/can-the-government-deliver-on-its-ambitious-100-point-roadmap",
+    "header": "Can the government deliver on its ambitious 100-point roadmap?",
+    "sentiment": "neutral",
+    "score": 64.02
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/03/29/uml-seeks-to-build-joint-front-against-oli-lekhak-arrests",
+    "header": "UML seeks to build joint front against Oli, Lekhak arrests",
+    "sentiment": "neutral",
+    "score": 68.03
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/04/06/rsp-s-rise-clouds-future-of-mid-level-reformers-in-old-parties",
+    "header": "RSP’s rise clouds future of mid-level reformers in old parties",
+    "sentiment": "neutral",
+    "score": 83.84
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/04/10/government-yet-to-move-on-by-elections-despite-30-provincial-and-local-seats-vacant",
+    "header": "Government yet to move on by-elections despite 30 provincial and local seats vacant",
+    "sentiment": "neutral",
+    "score": 59.38
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/04/08/constitution-amendment-task-force-holds-first-meeting-today",
+    "header": "Constitution amendment task force holds first meeting today",
+    "sentiment": "neutral",
+    "score": 93.34
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/04/05/dp-aryal-elected-speaker-unopposed",
+    "header": "DP Aryal elected Speaker unopposed",
+    "sentiment": "neutral",
+    "score": 84.88
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/03/30/congress-factions-parallel-activities-rattle-party-ranks",
+    "header": "Congress factions parallel activities rattle party ranks",
+    "sentiment": "neutral",
+    "score": 65.37
+  },
+  {
+    "link": "https://kathmandupost.com/politics/2026/04/10/nepal-and-india-to-prioritise-agendas-before-high-level-visits",
+    "header": "Nepal and India to prioritise agendas before high-level visits",
+    "sentiment": "neutral",
+    "score": 74.9
+  },
+  {
+    "link": "https://english.onlinekhabar.com/govt-releases-draft-national-commitment-plan-seeks-stakeholder-feedback.html",
+    "header": "Govt releases draft National Commitment Plan, seeks stakeholder feedback",
+    "sentiment": "neutral",
+    "score": 85.46
+  },
+  {
+    "link": "https://english.onlinekhabar.com/sameer-kapur-lands-in-kathmandu.html",
+    "header": "Senior US diplomat Sameer Kapur lands in Kathmandu for high-level talks",
+    "sentiment": "neutral",
+    "score": 91.01
+  },
+  {
+    "link": "https://english.onlinekhabar.com/home-minister-gurung-clarifies-his-property-ownership.html",
+    "header": "Home Minister Gurung clarifies his property ownership",
+    "sentiment": "neutral",
+    "score": 93.46
   },
   {
     "link": "https://english.onlinekhabar.com/arrest-warrant-sher-bahadur-deuba.html",
     "header": "Arrest warrant issued against Sher Bahadur Deuba and Arzu Rana",
     "sentiment": "neutral",
-    "score": 85.51
+    "score": 87.48
   },
   {
-    "link": "https://english.onlinekhabar.com/national-assembly-power-sharing-finalized-uml-secures-vice-chair-parties-split-committee-chairs.html",
-    "header": "National Assembly power-sharing finalized; UML secures Vice-Chair, parties split committee Chairs",
+    "link": "https://english.onlinekhabar.com/proposed-chairs-finalised-for-10-thematic-and-2-joint-committees-list.html",
+    "header": "Proposed chairs finalised for 10 thematic and 2 joint committees (List)",
     "sentiment": "neutral",
-    "score": 87.69
+    "score": 92.3
   },
   {
-    "link": "https://english.onlinekhabar.com/minister-gurung-for-legal-remedy-of-his-land-at-phewa-lake.html",
-    "header": "Minister Gurung for legal remedy of his land at Phewa Lake",
+    "link": "https://english.onlinekhabar.com/cabinet-approves-bills-to-amend-key-laws-forms-panel-for-securities-board-chief-appointment.html",
+    "header": "Cabinet approves bills to amend key laws, forms panel for securities board chief appointment",
     "sentiment": "neutral",
-    "score": 71.15
+    "score": 89.95
   },
   {
-    "link": "https://english.onlinekhabar.com/fuel-support-for-public-officials-reduced.html",
-    "header": "Fuel support for public officials reduced",
+    "link": "https://english.onlinekhabar.com/former-pm-kp-sharma-oli-released.html",
+    "header": "Former PM KP Sharma Oli released from police custody",
     "sentiment": "neutral",
-    "score": 74.89
+    "score": 93.36
   },
   {
-    "link": "https://english.onlinekhabar.com/deputy-speakers-election-to-take-place-on-friday.html",
-    "header": "Deputy Speaker’s election to take place on Friday",
+    "link": "https://english.onlinekhabar.com/federal-cabinet-order-reshuffled.html",
+    "header": "Federal Cabinet order of precedence reshuffled",
     "sentiment": "neutral",
-    "score": 94.17
+    "score": 92.79
   },
   {
-    "link": "https://english.onlinekhabar.com/cabinet-meeting-decisions-key-resolutions-announced.html",
-    "header": "Cabinet meeting decisions: Key resolutions announced",
+    "link": "https://english.onlinekhabar.com/nepal-us-talks-focus-on-boosting-investment-and-economic-cooperation.html",
+    "header": "Nepal–US talks focus on boosting investment and economic cooperation",
     "sentiment": "neutral",
-    "score": 82.75
+    "score": 70.37
   },
   {
-    "link": "https://english.onlinekhabar.com/dp-aryal-as-speaker-of-house.html",
-    "header": "MP DP Aryal elected unopposed as Speaker of House",
+    "link": "https://english.onlinekhabar.com/ministers-of-gandaki-province-oath.html",
+    "header": "New Ministers of Gandaki Province take oath",
     "sentiment": "neutral",
-    "score": 94.89
+    "score": 88.91
+  },
+  {
+    "link": "https://english.onlinekhabar.com/new-ministers-to-be-sworn-in-today.html",
+    "header": "New Ministers to be sworn in today",
+    "sentiment": "neutral",
+    "score": 91.62
   },
   {
     "link": "https://english.onlinekhabar.com/labour-minister-sah-relieved-of-duties.html",
     "header": "Labour Minister Sah relieved of duties",
     "sentiment": "neutral",
-    "score": 71.2
+    "score": 69.22
+  },
+  {
+    "link": "https://english.onlinekhabar.com/deputy-speakers-election-to-take-place-on-friday.html",
+    "header": "Deputy Speaker’s election to take place on Friday",
+    "sentiment": "neutral",
+    "score": 93.1
+  },
+  {
+    "link": "https://english.onlinekhabar.com/top-leaders-of-4-parties-placed-in-same-parliamentary-committee.html",
+    "header": "Top leaders of 4 parties placed in same parliamentary committee",
+    "sentiment": "neutral",
+    "score": 91.58
+  },
+  {
+    "link": "https://english.onlinekhabar.com/mofa-briefs-ministers-on-foreign-affairs-and-diplomatic-code-of-conduct.html",
+    "header": "MoFA briefs Ministers on ‘Foreign Affairs and Diplomatic Code of Conduct’",
+    "sentiment": "neutral",
+    "score": 91.07
+  },
+  {
+    "link": "https://english.onlinekhabar.com/asset-details-of-pm-and-ministers.html",
+    "header": "A look at the asset details of the Prime Minister and ministers",
+    "sentiment": "neutral",
+    "score": 85.9
+  },
+  {
+    "link": "https://english.onlinekhabar.com/deputy-speaker-assumes-office.html",
+    "header": "Deputy Speaker assumes office",
+    "sentiment": "neutral",
+    "score": 94.12
   },
   {
     "link": "https://english.onlinekhabar.com/balen-shah-foreign-diplomats.html",
     "header": "Prime Minister Balen Shah briefs foreign diplomats on government priorities",
     "sentiment": "neutral",
-    "score": 74.49
+    "score": 60.55
+  },
+  {
+    "link": "https://english.onlinekhabar.com/parliamentary-committee-chairs-to-take-oath.html",
+    "header": "Parliamentary committee chairs to take oath",
+    "sentiment": "neutral",
+    "score": 89.56
+  },
+  {
+    "link": "https://english.onlinekhabar.com/rsp-backs-shram-sanskriti-party-candidate-for-deputy-speaker-securing-two-thirds-majority.html",
+    "header": "RSP backs Shram Sanskriti Party candidate for Deputy Speaker, securing two thirds majority",
+    "sentiment": "positive",
+    "score": 57.49
   }
 ]

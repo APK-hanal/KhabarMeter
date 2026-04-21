@@ -15,7 +15,7 @@ def load_article(file):
 def analysis(articles):
     results = []
     for article in articles:
-        sentiment = sentiment_model(article["body"][:512])
+        sentiment = sentiment_model(article["body"])
         results.append({"link":article["link"],
                         'header':article['header'],
                         "sentiment": sentiment[0]["label"],

@@ -1,122 +1,242 @@
 [
   {
-    "link": "https://english.onlinekhabar.com/industries-directed-to-submit-daily-gas-sales-reports-to-nepal-oil-corporation.html",
-    "header": "Industries directed to submit daily gas sales reports to Nepal Oil Corporation",
+    "link": "https://kathmandupost.com/money/2026/04/18/selective-buying-lifts-market-amid-flat-benchmark",
+    "header": "Selective buying lifts market amid flat benchmark",
     "sentiment": "neutral",
-    "score": 86.36
+    "score": 78.06
   },
   {
-    "link": "https://english.onlinekhabar.com/world-bank-approves-rs-12-5-billion-loan-for-greater-lumbini-project.html",
-    "header": "World Bank approves Rs 12.5 billion loan for Greater Lumbini Project",
-    "sentiment": "neutral",
-    "score": 58.64
-  },
-  {
-    "link": "https://english.onlinekhabar.com/kiran-pandit-nrb-deputy-governor.html",
-    "header": "Kiran Pandit appointed NRB Deputy Governor",
-    "sentiment": "neutral",
-    "score": 86.44
-  },
-  {
-    "link": "https://english.onlinekhabar.com/nepal-stock-market-declines.html",
-    "header": "Nepal stock market declines after five days of gains",
-    "sentiment": "neutral",
-    "score": 59.04
-  },
-  {
-    "link": "https://english.onlinekhabar.com/applications-open-for-shark-tank-nepal-season-2.html",
-    "header": "Applications open for Shark Tank Nepal Season 2",
-    "sentiment": "positive",
-    "score": 53.42
-  },
-  {
-    "link": "https://english.onlinekhabar.com/gold-price-drops-by-rs-7800-per-tola-falls-below-rs-300000.html",
-    "header": "Gold price drops by Rs 7,800 per tola, falls below Rs 300,000",
-    "sentiment": "neutral",
-    "score": 62.45
-  },
-  {
-    "link": "https://english.onlinekhabar.com/kennes-redefining-nepali-skincare-through-himalayan-wisdom.html",
-    "header": "Kenne’s: Redefining Nepali skincare through Himalayan wisdom",
-    "sentiment": "positive",
-    "score": 54.84
-  },
-  {
-    "link": "https://english.onlinekhabar.com/world-bank-supports-nepals-clean-air-project.html",
-    "header": "World Bank supports Nepal’s Clean Air Project",
-    "sentiment": "positive",
-    "score": 75.55
-  },
-  {
-    "link": "https://english.onlinekhabar.com/gold-price-drops-rs-12500-per-tola-trading-at-rs-282000.html",
-    "header": "Gold price drops Rs 12,500 per tola, trading at Rs 282,000",
-    "sentiment": "neutral",
-    "score": 71.26
-  },
-  {
-    "link": "https://english.onlinekhabar.com/gold-prices-continue-to-decline.html",
-    "header": "Gold prices continue to decline",
-    "sentiment": "negative",
-    "score": 57.79
-  },
-  {
-    "link": "https://english.onlinekhabar.com/annapurna-region-welcomes-48500-plus-foreign-tourists-in-a-month.html",
-    "header": "Annapurna region welcomes 48,500 plus foreign tourists in a month",
-    "sentiment": "positive",
-    "score": 84.32
-  },
-  {
-    "link": "https://english.onlinekhabar.com/dip-in-gold-and-silver-prices.html",
-    "header": "Dip in gold and silver prices",
-    "sentiment": "neutral",
-    "score": 68.23
-  },
-  {
-    "link": "https://english.onlinekhabar.com/pokhara-targets-cities-of-eastern-nepal-to-receive-domestic-tourists.html",
-    "header": "Pokhara targets cities of eastern Nepal to receive domestic tourists",
+    "link": "https://kathmandupost.com/money/2026/04/15/bullion-prices-rebound-after-early-week-dip",
+    "header": "Bullion prices rebound after early-week dip",
     "sentiment": "neutral",
     "score": 84.72
   },
   {
-    "link": "https://english.onlinekhabar.com/petrol-up-by-rs15.html",
-    "header": "Petrol up by Rs15 and diesel by Rs10 across Nepal",
+    "link": "https://kathmandupost.com/money/2026/04/16/interim-standards-in-the-works-as-law-to-regulate-ride-hailing-sector-is-delayed",
+    "header": "Interim standards in the works as law to regulate ride-hailing sector is delayed",
     "sentiment": "neutral",
-    "score": 91.75
+    "score": 91.48
   },
   {
-    "link": "https://english.onlinekhabar.com/nepali-migrant-workers-send-remittance-of-rs-1449-billion-in-first-eight-months.html",
-    "header": "Nepali migrant workers send remittance of Rs 1449 billion in first eight months",
-    "sentiment": "neutral",
-    "score": 65.83
+    "link": "https://kathmandupost.com/money/2026/04/21/west-asia-tensions-hit-nepal-s-tourism-hard-as-bookings-tumble",
+    "header": "West Asia tensions hit Nepal’s tourism hard as bookings tumble",
+    "sentiment": "negative",
+    "score": 49.2
   },
   {
-    "link": "https://english.onlinekhabar.com/gold-price-drops-by-rs-5400-per-tola.html",
-    "header": "Gold price drops by Rs 5,400 per tola",
+    "link": "https://kathmandupost.com/money/2026/04/16/nepse-allows-round-the-clock-order-placement-as-trading-rules-revised",
+    "header": "Nepse allows round-the-clock order placement as trading rules revised",
     "sentiment": "neutral",
-    "score": 51.55
+    "score": 90.92
   },
   {
-    "link": "https://english.onlinekhabar.com/call-for-immediate-operation-of-gautam-buddha-international-airport.html",
-    "header": "Call for immediate operation of Gautam Buddha International Airport",
+    "link": "https://kathmandupost.com/money/2026/04/15/nepali-media-is-fighting-for-survival-its-journalists-are-fighting-for-their-paychecks",
+    "header": "Nepali media is fighting for survival. Its journalists are fighting for their paychecks",
+    "sentiment": "negative",
+    "score": 74.17
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/20/in-sindhuli-cows-are-connected",
+    "header": "In Sindhuli, cows are connected",
     "sentiment": "neutral",
-    "score": 80.48
+    "score": 84.76
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/18/global-ride-hailing-giant-uber-set-for-nepal-s-already-crowded-market",
+    "header": "Global ride-hailing giant Uber set for Nepal’s already crowded market",
+    "sentiment": "neutral",
+    "score": 75.78
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/17/loans-are-cheaper-than-ever-borrowers-are-still-holding-back",
+    "header": "Loans are cheaper than ever. Borrowers are still holding back",
+    "sentiment": "neutral",
+    "score": 55.25
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/15/fluctuations-mark-nepal-real-estate-over-past-three-years",
+    "header": "Fluctuations mark Nepal real estate over past three years",
+    "sentiment": "positive",
+    "score": 57.21
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/18/despite-surging-costs-everest-still-draws-climbers-as-china-s-north-side-stays-shut",
+    "header": "Despite surging costs, Everest still draws climbers as China’s north side stays shut",
+    "sentiment": "neutral",
+    "score": 76.25
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/14/buddha-air-relaunches-royal-club-as-fully-digital-loyalty-programme",
+    "header": "Buddha Air relaunches Royal Club as fully digital loyalty programme",
+    "sentiment": "positive",
+    "score": 56.6
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/14/nepali-airlines-in-a-scramble-as-fuel-costs-spike-passengers-vanish",
+    "header": "Nepali airlines in a scramble as fuel costs spike, passengers vanish",
+    "sentiment": "negative",
+    "score": 65.92
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/16/petroleum-prices-increased-for-fifth-time-in-31-days",
+    "header": "Petroleum prices increased for fifth time in 31 days",
+    "sentiment": "neutral",
+    "score": 88.18
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/19/nepal-business-delegation-pitches-hydro-to-data-vision-in-washington-meetings",
+    "header": "Nepal business delegation pitches ‘hydro-to-data’ vision in Washington meetings",
+    "sentiment": "neutral",
+    "score": 66.39
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/16/nepal-ride-hailing-law-fails-to-take-off-despite-court-orders",
+    "header": "Nepal ride-hailing law fails to take off despite court orders",
+    "sentiment": "neutral",
+    "score": 67.41
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/19/rs100-tax-rule-aimed-at-curbing-small-scale-smuggling-hits-daily-shoppers-at-nepal-india-border",
+    "header": "Rs100 tax rule aimed at curbing small-scale smuggling hits daily shoppers at Nepal-India border",
+    "sentiment": "neutral",
+    "score": 84.0
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/16/hormuz-strait-closure-takes-its-toll-on-global-economic-growth",
+    "header": "Hormuz Strait closure takes its toll on global economic growth",
+    "sentiment": "negative",
+    "score": 65.12
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/13/chinese-planes-continue-to-be-a-costly-burden-for-nepal-airlines",
+    "header": "Chinese planes continue to be a costly burden for Nepal Airlines",
+    "sentiment": "negative",
+    "score": 70.02
+  },
+  {
+    "link": "https://kathmandupost.com/money/2026/04/21/insurance-push-brings-new-hope-to-disaster-hit-bajhang-farmers",
+    "header": "Insurance push brings new hope to disaster-hit Bajhang farmers",
+    "sentiment": "neutral",
+    "score": 68.14
   },
   {
     "link": "https://english.onlinekhabar.com/gunakar-bhatta-npc-vice-chair.html",
     "header": "Gunakar Bhatta appointed National Planning Commission Vice Chair",
     "sentiment": "neutral",
-    "score": 87.77
+    "score": 87.28
+  },
+  {
+    "link": "https://english.onlinekhabar.com/nepal-stock-market-declines.html",
+    "header": "Nepal stock market declines after five days of gains",
+    "sentiment": "neutral",
+    "score": 68.35
+  },
+  {
+    "link": "https://english.onlinekhabar.com/chitwan-shelter-home-manages-its-cost-thru-asparagus-farming.html",
+    "header": "Chitwan shelter home manages its cost thru asparagus farming",
+    "sentiment": "neutral",
+    "score": 83.93
+  },
+  {
+    "link": "https://english.onlinekhabar.com/world-bank-approves-rs-12-5-billion-loan-for-greater-lumbini-project.html",
+    "header": "World Bank approves Rs 12.5 billion loan for Greater Lumbini Project",
+    "sentiment": "neutral",
+    "score": 60.04
+  },
+  {
+    "link": "https://english.onlinekhabar.com/spring-climbing-season-begins-9-people-successfully-scaled-mt-dhaulagiri.html",
+    "header": "Spring climbing season begins: 9 people successfully scaled Mt Dhaulagiri",
+    "sentiment": "positive",
+    "score": 52.97
+  },
+  {
+    "link": "https://english.onlinekhabar.com/gold-price-drops-rs-12500-per-tola-trading-at-rs-282000.html",
+    "header": "Gold price drops Rs 12,500 per tola, trading at Rs 282,000",
+    "sentiment": "neutral",
+    "score": 73.11
+  },
+  {
+    "link": "https://english.onlinekhabar.com/labour-immigration-rift-over-documents-leaves-migrant-workers-in-limbo.html",
+    "header": "Labour–Immigration rift over documents leaves migrant workers in limbo",
+    "sentiment": "negative",
+    "score": 60.54
+  },
+  {
+    "link": "https://english.onlinekhabar.com/gold-prices-continue-to-decline.html",
+    "header": "Gold prices continue to decline",
+    "sentiment": "neutral",
+    "score": 52.02
+  },
+  {
+    "link": "https://english.onlinekhabar.com/preparation-for-economic-survey-completed.html",
+    "header": "Preparation for economic survey completed",
+    "sentiment": "neutral",
+    "score": 74.85
+  },
+  {
+    "link": "https://english.onlinekhabar.com/fuel-prices-increased.html",
+    "header": "Fuel prices increased",
+    "sentiment": "neutral",
+    "score": 90.01
+  },
+  {
+    "link": "https://english.onlinekhabar.com/development-projects-affected-by-petroleum-price-hike.html",
+    "header": "Development projects affected by petroleum price hike",
+    "sentiment": "negative",
+    "score": 65.05
+  },
+  {
+    "link": "https://english.onlinekhabar.com/annapurna-region-welcomes-48500-plus-foreign-tourists-in-a-month.html",
+    "header": "Annapurna region welcomes 48,500 plus foreign tourists in a month",
+    "sentiment": "positive",
+    "score": 82.09
+  },
+  {
+    "link": "https://english.onlinekhabar.com/nepali-migrant-workers-send-remittance-of-rs-1449-billion-in-first-eight-months.html",
+    "header": "Nepali migrant workers send remittance of Rs 1449 billion in first eight months",
+    "sentiment": "neutral",
+    "score": 63.69
+  },
+  {
+    "link": "https://english.onlinekhabar.com/gold-price-drops-by-rs-7800-per-tola-falls-below-rs-300000.html",
+    "header": "Gold price drops by Rs 7,800 per tola, falls below Rs 300,000",
+    "sentiment": "neutral",
+    "score": 64.38
+  },
+  {
+    "link": "https://english.onlinekhabar.com/call-for-immediate-operation-of-gautam-buddha-international-airport.html",
+    "header": "Call for immediate operation of Gautam Buddha International Airport",
+    "sentiment": "neutral",
+    "score": 64.42
   },
   {
     "link": "https://english.onlinekhabar.com/multinational-companies-allege-trademark-infringement-in-nepal.html",
     "header": "Multinational companies allege trademark infringement in Nepal",
     "sentiment": "neutral",
-    "score": 80.14
+    "score": 76.83
   },
   {
-    "link": "https://english.onlinekhabar.com/gold-and-silver-prices-decline-2.html",
-    "header": "Gold and silver prices decline",
+    "link": "https://english.onlinekhabar.com/pokhara-targets-cities-of-eastern-nepal-to-receive-domestic-tourists.html",
+    "header": "Pokhara targets cities of eastern Nepal to receive domestic tourists",
     "sentiment": "neutral",
-    "score": 60.15
+    "score": 76.24
+  },
+  {
+    "link": "https://english.onlinekhabar.com/gold-price-drops-by-rs-5400-per-tola.html",
+    "header": "Gold price drops by Rs 5,400 per tola",
+    "sentiment": "neutral",
+    "score": 52.01
+  },
+  {
+    "link": "https://english.onlinekhabar.com/kennes-redefining-nepali-skincare-through-himalayan-wisdom.html",
+    "header": "Kenne’s: Redefining Nepali skincare through Himalayan wisdom",
+    "sentiment": "neutral",
+    "score": 59.11
+  },
+  {
+    "link": "https://english.onlinekhabar.com/kiran-pandit-nrb-deputy-governor.html",
+    "header": "Kiran Pandit appointed NRB Deputy Governor",
+    "sentiment": "neutral",
+    "score": 85.81
   }
 ]
