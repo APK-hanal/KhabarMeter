@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import time
 import json
 from html import unescape
-import sys
 
 HEAD = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
@@ -11,73 +10,93 @@ HEAD = {
 
 # Get links from archives 
 def get_headerlinks_ok(link):
-    response = requests.get(link,headers=HEAD)
-    soup = BeautifulSoup(response.text ,"html.parser" )
-    div = soup.find("div", class_= "ok-details-content-left")
-    heads = div.find_all("a",href=True)
-    links = []
-    for a_tag in heads:
-        href = a_tag['href']
-        if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
-            links.append(href)
-    #remove duplicate values
-    return list(set(links))
+    response = requests.get(link,headers=HEAD,timeout = 10)
+    if response.status_code == 404:
+        print(f"URL not found{link}")
+    elif response.status_code == 403:
+        print(f"Error , you were denied acces to {link}")
+    else:    
+        soup = BeautifulSoup(response.text ,"html.parser" )
+        div = soup.find("div", class_= "ok-details-content-left")
+        heads = div.find_all("a",href=True)
+        links = []
+        for a_tag in heads:
+            href = a_tag['href']
+            if href.startswith("https://english.onlinekhabar.com/") and href.endswith('.html'):
+                links.append(href)
+        #remove duplicate values
+        return list(set(links))
 
 def get_headerlinks_kp(link):
-    response = requests.get(link, headers= HEAD)
-    soup = BeautifulSoup(response.text,'html.parser')
-    div = soup.find('div', class_ ='block--morenews' )
-    heads = div.find_all('a', href = True)
-    links = []
-    for a_tag in heads:
-        href = a_tag['href']
-        if href.startswith("/") and not href.startswith('/author/'):
-            links.append(f"https://kathmandupost.com{href}")
-    #Duplicates arise as the link is also present in the images of the article :>
-    return list(set(links))
+    response = requests.get(link, headers= HEAD,timeout=10)
+    if response.status_code == 404:
+        print(f"URL not found{link}")
+    elif response.status_code == 403:
+        print(f"Error , you were denied acces to {link}")
+    else:
+        soup = BeautifulSoup(response.text,'html.parser')
+        div = soup.find('div', class_ ='block--morenews' )
+        heads = div.find_all('a', href = True)
+        links = []
+        for a_tag in heads:
+            href = a_tag['href']
+            if href.startswith("/") and not href.startswith('/author/'):
+                links.append(f"https://kathmandupost.com{href}")
+        #Duplicates arise as the link is also present in the images of the article :>
+        return list(set(links))
             
     
 #get headers and body content from the specific article
 def scrape_ok(link):
     try:
         response = requests.get(link,headers=HEAD,timeout= 10)
-        response.encoding = "utf-8"
-        soup = BeautifulSoup(response.text, "html.parser")
-        #header
-        head_div = soup.find('div', class_ ='ok-post-header')
-        header = unescape(head_div.find('h1').text.strip())
-        #body
-        body = ""
-        body_div = soup.find('div', class_= "post-content-wrap")
-        for bodies in body_div.find_all('p'):
-            body += unescape(bodies.text.strip())
-        return {
-            "source":"Onlinekhabar",
-            "link" :link,
-            "header" : header,
-            "body" : body
-        }
+        if response.status_code == 404:
+            print(f"URL not found{link}")
+        elif response.status_code == 403:
+            print(f"Error , you were denied acces to {link}")
+        else:
+            response.encoding = "utf-8"
+            soup = BeautifulSoup(response.text, "html.parser")
+            #header
+            head_div = soup.find('div', class_ ='ok-post-header')
+            header = unescape(head_div.find('h1').text.strip())
+            #body
+            body = ""
+            body_div = soup.find('div', class_= "post-content-wrap")
+            for bodies in body_div.find_all('p'):
+                body += unescape(bodies.text.strip())
+            return {
+                "source":"Onlinekhabar",
+                "link" :link,
+                "header" : header,
+                "body" : body
+            }
     except Exception as e:
         print(f"Failed to scrape {link} due to : {e}")
         return None
 
 def scrape_kp(link):
     try:
-        response = requests.get(link,headers= HEAD)
-        response.encoding = "utf-8"
-        soup = BeautifulSoup(response.text,'html.parser')
-        head_div = soup.find('div', class_="col-sm-8")
-        header = unescape(head_div.find('h1').text.strip())
-        body = ''
-        body_section = soup.find('section' ,class_="story-section")
-        for bodies in body_section.find_all('p'):
-            body += unescape(bodies.text.strip())
-        return {
-            "source":"The Kathmandu Post",
-            "link":link,
-            "header":header,
-            "body":body
-        }        
+        response = requests.get(link,headers= HEAD,timeout=10)
+        if response.status_code == 404:
+            print(f"URL not found{link}")
+        elif response.status_code == 403:
+            print(f"Error , you were denied acces to {link}")
+        else:
+            response.encoding = "utf-8"
+            soup = BeautifulSoup(response.text,'html.parser')
+            head_div = soup.find('div', class_="col-sm-8")
+            header = unescape(head_div.find('h1').text.strip())
+            body = ''
+            body_section = soup.find('section' ,class_="story-section")
+            for bodies in body_section.find_all('p'):
+                body += unescape(bodies.text.strip())
+            return {
+                "source":"The Kathmandu Post",
+                "link":link,
+                "header":header,
+                "body":body
+            }        
     except Exception as e:
         print("Error in scraping", e)
 
